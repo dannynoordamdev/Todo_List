@@ -2,7 +2,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
 
         boolean exit = true;
@@ -40,9 +40,9 @@ public class Main {
     }
 
     private static void getTasksForName(String name) {
-        String url = "jdbc:mysql://localhost:3306/todo_list";
-        String user = "root";
-        String password = "root";
+        String url = "jdbc:postgresql://db.usbfayfombikudolaqri.supabase.co:5432/postgres?user=postgres&password=J90apfLdp9osj5nZ/";
+        String user = "postgres";
+        String password = "J90apfLdp9osj5nZ";
         try (Connection connection = DriverManager.getConnection(url, user, password);
 
              PreparedStatement statement = connection.prepareStatement("SELECT task FROM tasks WHERE name = ?")) {
@@ -57,9 +57,9 @@ public class Main {
     }
 
     private static void insertData(String name, String task) {
-        String url = "jdbc:mysql://localhost:3306/todo_list";
-        String username = "root";
-        String password = "Paris2023!";
+        String url = "jdbc:postgresql://db.usbfayfombikudolaqri.supabase.co:5432/postgres?user=postgres&password=J90apfLdp9osj5nZ/";
+        String username = "postgres";
+        String password = "J90apfLdp9osj5nZ";
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String query = "INSERT INTO tasks (name, task) VALUES (?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
