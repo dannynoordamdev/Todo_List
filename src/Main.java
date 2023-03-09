@@ -20,6 +20,7 @@ public class Main {
                 String task = scanner.nextLine();
                 insertData(name,task);
                 System.out.println("Upload successful!");
+
                 System.out.println();
 
             } else if (option ==2) {
@@ -40,9 +41,9 @@ public class Main {
     }
 
     private static void getTasksForName(String name) {
-        String url = "jdbc:postgresql://db.usbfayfombikudolaqri.supabase.co:5432/postgres?user=postgres&password=J90apfLdp9osj5nZ/";
+        String url = "jdbc:postgresql://db.usbfayfombikudolaqri.supabase.co:5432/postgres?user=postgres&password=g4sls8hNDUpZvgt3";
         String user = "postgres";
-        String password = "J90apfLdp9osj5nZ";
+        String password = "g4sls8hNDUpZvgt3";
         try (Connection connection = DriverManager.getConnection(url, user, password);
 
              PreparedStatement statement = connection.prepareStatement("SELECT task FROM tasks WHERE name = ?")) {
@@ -57,9 +58,9 @@ public class Main {
     }
 
     private static void insertData(String name, String task) {
-        String url = "jdbc:postgresql://db.usbfayfombikudolaqri.supabase.co:5432/postgres?user=postgres&password=J90apfLdp9osj5nZ/";
+        String url = "jdbc:postgresql://db.usbfayfombikudolaqri.supabase.co:5432/postgres?user=postgres&password=g4sls8hNDUpZvgt3";
         String username = "postgres";
-        String password = "J90apfLdp9osj5nZ";
+        String password = "g4sls8hNDUpZvgt3";
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String query = "INSERT INTO tasks (name, task) VALUES (?, ?)";
             PreparedStatement statement = connection.prepareStatement(query);
