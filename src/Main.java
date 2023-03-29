@@ -43,7 +43,7 @@ public class Main {
     private static void getTasksForName(String name) {
         String url = "jdbc:postgresql://db.usbfayfombikudolaqri.supabase.co:5432/postgres?user=postgres&password=g4sls8hNDUpZvgt3";
         String user = "postgres";
-        String password = "g4sls8hNDUpZvgt3";
+        String password = "x";
         try (Connection connection = DriverManager.getConnection(url, user, password);
 
              PreparedStatement statement = connection.prepareStatement("SELECT task FROM tasks WHERE name = ?")) {
